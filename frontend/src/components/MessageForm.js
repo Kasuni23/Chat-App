@@ -2,6 +2,9 @@ import React,{useState,useContext,useRef,useEffect} from 'react'
 import { Form ,Row,Col, Button} from 'react-bootstrap'
 import { useSelector } from "react-redux";
 import{AppContext} from "../context/appContext";
+import Img from "../assets/image.png";
+import Attach from "../assets/attach.png";
+import emoji from 'react-input-emoji'
 import "./MessageForm.css";
 
 function MessageForm() {
@@ -92,16 +95,27 @@ function MessageForm() {
       </div>
       <Form onSubmit={handleSubmit}>
         <Row>
-          <Col md={11}>
+          <Col md={12}>
             <Form.Group>
-              <Form.Control type='text' placeholder='Your Message' disabled ={!user} value={message} onChange={(e)=> setMessage(e.target.value)}></Form.Control>
-            </Form.Group> 
-          </Col>
-          <Col md={1}>
+              <div className='input'>
+              <Form.Control type='text' placeholder='Your Message' disabled ={!user} value={message} onChange={(e)=> setMessage(e.target.value)} ></Form.Control>
+              <div className='send'>
+                <img src={Attach} alt="" />
+                <input type="file" style={{display:"none"}} id="file" />
+                <label htmlFor='file'>
+                  <img src={Img} alt="" />
+                </label>
+                <Col md={1}>
             <Button variant='primary' type='submit' style={{width:"100" , backgroundColor:"blue"}} disabled ={!user}>
               <i className="fas fa-paper-plane"></i>
             </Button>
           </Col>
+
+              </div>
+              </div>
+            </Form.Group> 
+          </Col>
+          
         </Row>
         </Form>
       

@@ -61,3 +61,23 @@
     border-radius: 50%;
     margin-left: 10px;
 }
+.input{
+    height: 50px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.send{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  
+}
+
+img{
+    height: 24px;
+    cursor: pointer;
+}
