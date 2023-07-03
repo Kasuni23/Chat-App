@@ -7,3 +7,10 @@ This chat application is built using React for the front-end and Node.js for the
 
 The project is designed to be highly scalable, allowing for multiple users to join different chat rooms and exchange messages instantaneously. It utilizes modern web development practices and libraries to provide a responsive and user-friendly interface.
 
+# Technology
+
+🛑ReactJS - Frontend
+🛑NodeJS - Backend
+🛑CSS
+🛑HTML
+🛑Javascript
